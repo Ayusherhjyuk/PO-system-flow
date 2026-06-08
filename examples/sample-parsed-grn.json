@@ -1,0 +1,59 @@
+{
+  "poNumber": "CI4PO05788",
+  "grnNumber": "CI4000020234",
+  "invoiceNumber": null,
+  "poDate": null,
+  "grnDate": "2026-03-24",
+  "invoiceDate": null,
+  "vendorName": "M/s AFP",
+  "items": [
+    {
+      "sku": "11423",
+      "description": "Spicy Veg Momos 24.0 Pieces",
+      "quantity": null,
+      "receivedQuantity": 50
+    },
+    {
+      "sku": "11797",
+      "description": "Meatigo Hot Wings 250.0 g",
+      "quantity": null,
+      "receivedQuantity": 75
+    },
+    {
+      "sku": "18003",
+      "description": "Meatigo Chicken Curry Cut Skinless Frozen 450.0 g",
+      "quantity": null,
+      "receivedQuantity": 30
+    },
+    {
+      "sku": "18004",
+      "description": "Meatigo Chicken Boneless Breast Frozen 450.0 g",
+      "quantity": null,
+      "receivedQuantity": 30
+    },
+    {
+      "sku": "253430",
+      "description": "Salami 200.0 g",
+      "quantity": null,
+      "receivedQuantity": 75
+    },
+    {
+      "sku": "33390",
+      "description": "Seekh Kebab 500.0 g",
+      "quantity": null,
+      "receivedQuantity": 272
+    },
+    {
+      "sku": "398656",
+      "description": "Meatigo Chicken Drumsticks 450.0 g",
+      "quantity": null,
+      "receivedQuantity": 270
+    },
+    {
+      "sku": "4459",
+      "description": "Chicken Momos 24.0 Pieces",
+      "quantity": null,
+      "receivedQuantity": 475
+    }
+  ]
+}

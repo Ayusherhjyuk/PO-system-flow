@@ -1,0 +1,110 @@
+openapi: 3.0.3
+info:
+  title: Three-Way Match Engine API
+  version: 1.0.0
+  description: >
+    Upload PO / GRN / Invoice documents, parse them with Gemini into structured
+    JSON, store in MongoDB, and run an item-level three-way match.
+servers:
+  - url: http://localhost:3000
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: OK
+  /documents/upload:
+    post:
+      summary: Upload, parse, store a document and recompute the match
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [file, documentType]
+              properties:
+                file:
+                  type: string
+                  format: binary
+                documentType:
+                  type: string
+                  enum: [po, grn, invoice]
+      responses:
+        '201':
+          description: Document stored and parsed; current match returned.
+        '400':
+          description: Missing/invalid file or documentType.
+        '422':
+          description: poNumber could not be extracted from the document.
+  /documents/{id}:
+    get:
+      summary: Get a stored parsed document
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: The stored document.
+        '404':
+          description: Not found.
+  /match/{poNumber}:
+    get:
+      summary: Get the three-way match result for a PO number
+      parameters:
+        - name: poNumber
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Match result.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MatchResult'
+        '404':
+          description: No documents for this poNumber.
+components:
+  schemas:
+    MatchResult:
+      type: object
+      properties:
+        poNumber: { type: string }
+        status:
+          type: string
+          enum: [matched, partially_matched, mismatch, insufficient_documents]
+        documentCounts:
+          type: object
+          properties:
+            po: { type: integer }
+            grn: { type: integer }
+            invoice: { type: integer }
+        reasons:
+          type: array
+          items:
+            type: string
+            enum:
+              - grn_qty_exceeds_po_qty
+              - invoice_qty_exceeds_po_qty
+              - invoice_qty_exceeds_grn_qty
+              - invoice_date_before_po_date
+              - duplicate_po
+              - item_missing_in_po
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              sku: { type: string }
+              description: { type: string, nullable: true }
+              poQuantity: { type: number, nullable: true }
+              grnReceivedQuantity: { type: number, nullable: true }
+              invoiceQuantity: { type: number, nullable: true }
+              matched: { type: boolean }
+              reasons:
+                type: array
+                items: { type: string }

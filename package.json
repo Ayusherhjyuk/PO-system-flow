@@ -1,0 +1,27 @@
+{
+  "name": "three-way-match-engine",
+  "version": "1.0.0",
+  "description": "Three-Way Match Engine for PO, GRN, and Invoice documents using Gemini + MongoDB",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node scripts/seed.js"
+  },
+  "keywords": [
+    "three-way-match",
+    "procurement",
+    "gemini",
+    "mongodb",
+    "express"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
+    "multer": "^2.0.1"
+  }
+}

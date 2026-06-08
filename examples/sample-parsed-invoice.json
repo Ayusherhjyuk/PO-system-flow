@@ -1,0 +1,59 @@
+{
+  "poNumber": "CI4PO05788",
+  "grnNumber": null,
+  "invoiceNumber": "IN25MH2504251",
+  "poDate": null,
+  "grnDate": null,
+  "invoiceDate": "2026-03-24",
+  "vendorName": "M/s AFP",
+  "items": [
+    {
+      "sku": "11423",
+      "description": "PSM Cheesy Spicy Vegetable Momos 24Pcs",
+      "quantity": 50,
+      "receivedQuantity": null
+    },
+    {
+      "sku": "11797",
+      "description": "Meatigo RTC Meatigo Hot Wings 250g",
+      "quantity": 75,
+      "receivedQuantity": null
+    },
+    {
+      "sku": "18003",
+      "description": "Meatigo Chicken Curry Cuts 450g",
+      "quantity": 30,
+      "receivedQuantity": null
+    },
+    {
+      "sku": "18004",
+      "description": "Meatigo Chicken Boneless Breast 450g",
+      "quantity": 30,
+      "receivedQuantity": null
+    },
+    {
+      "sku": "253430",
+      "description": "PSM Pork Plain Salami 200g",
+      "quantity": 75,
+      "receivedQuantity": null
+    },
+    {
+      "sku": "33390",
+      "description": "PSM Frozen Chicken Seekh Kabab 500g",
+      "quantity": 272,
+      "receivedQuantity": null
+    },
+    {
+      "sku": "398656",
+      "description": "Meatigo Chicken Drumsticks 450g",
+      "quantity": 270,
+      "receivedQuantity": null
+    },
+    {
+      "sku": "4459",
+      "description": "PSM Chicken Momos 24Pcs",
+      "quantity": 475,
+      "receivedQuantity": null
+    }
+  ]
+}

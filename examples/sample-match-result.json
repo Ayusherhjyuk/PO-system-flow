@@ -1,0 +1,95 @@
+{
+  "poNumber": "CI4PO05788",
+  "status": "matched",
+  "documentCounts": {
+    "po": 1,
+    "grn": 1,
+    "invoice": 1
+  },
+  "reasons": [],
+  "items": [
+    {
+      "sku": "11423",
+      "description": "Cheesy Spicy Veg Momos 24 Pieces",
+      "poQuantity": 50,
+      "grnReceivedQuantity": 50,
+      "invoiceQuantity": 50,
+      "matched": true,
+      "reasons": []
+    },
+    {
+      "sku": "11797",
+      "description": "Meatigo Hot Wings 250 g",
+      "poQuantity": 75,
+      "grnReceivedQuantity": 75,
+      "invoiceQuantity": 75,
+      "matched": true,
+      "reasons": []
+    },
+    {
+      "sku": "18003",
+      "description": "Meatigo Chicken Curry Cut Skinless Frozen 450 g",
+      "poQuantity": 120,
+      "grnReceivedQuantity": 30,
+      "invoiceQuantity": 30,
+      "matched": true,
+      "reasons": []
+    },
+    {
+      "sku": "18004",
+      "description": "Meatigo Chicken Boneless Breast Frozen 450 g",
+      "poQuantity": 540,
+      "grnReceivedQuantity": 30,
+      "invoiceQuantity": 30,
+      "matched": true,
+      "reasons": []
+    },
+    {
+      "sku": "253430",
+      "description": "Pork Salami 200 g",
+      "poQuantity": 75,
+      "grnReceivedQuantity": 75,
+      "invoiceQuantity": 75,
+      "matched": true,
+      "reasons": []
+    },
+    {
+      "sku": "33390",
+      "description": "Chicken Seekh Kebab 500 g",
+      "poQuantity": 272,
+      "grnReceivedQuantity": 272,
+      "invoiceQuantity": 272,
+      "matched": true,
+      "reasons": []
+    },
+    {
+      "sku": "398656",
+      "description": "Meatigo Chicken Drumsticks 450 g",
+      "poQuantity": 270,
+      "grnReceivedQuantity": 270,
+      "invoiceQuantity": 270,
+      "matched": true,
+      "reasons": []
+    },
+    {
+      "sku": "4459",
+      "description": "Original Chicken Momos 24 Pieces",
+      "poQuantity": 475,
+      "grnReceivedQuantity": 475,
+      "invoiceQuantity": 475,
+      "matched": true,
+      "reasons": []
+    }
+  ],
+  "documents": {
+    "po": [
+      "665f...po"
+    ],
+    "grns": [
+      "665f...grn"
+    ],
+    "invoices": [
+      "665f...inv"
+    ]
+  }
+}

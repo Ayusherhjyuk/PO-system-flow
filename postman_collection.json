@@ -1,0 +1,68 @@
+{
+  "info": {
+    "name": "Three-Way Match Engine",
+    "description": "PO / GRN / Invoice three-way match API. Set the {{baseUrl}} variable (default http://localhost:3000).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3000" },
+    { "key": "poNumber", "value": "CI4PO05788" },
+    { "key": "documentId", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "request": { "method": "GET", "url": "{{baseUrl}}/health" }
+    },
+    {
+      "name": "Upload PO",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/documents/upload",
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            { "key": "documentType", "value": "po", "type": "text" },
+            { "key": "file", "type": "file", "src": "PO.pdf" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Upload GRN",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/documents/upload",
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            { "key": "documentType", "value": "grn", "type": "text" },
+            { "key": "file", "type": "file", "src": "GRN.pdf" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Upload Invoice",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/documents/upload",
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            { "key": "documentType", "value": "invoice", "type": "text" },
+            { "key": "file", "type": "file", "src": "Invoice.pdf" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Document by id",
+      "request": { "method": "GET", "url": "{{baseUrl}}/documents/{{documentId}}" }
+    },
+    {
+      "name": "Get Match by PO number",
+      "request": { "method": "GET", "url": "{{baseUrl}}/match/{{poNumber}}" }
+    }
+  ]
+}
