@@ -4,6 +4,14 @@ A backend service that ingests **Purchase Order**, **Goods Receipt Note**, and *
 
 **Stack:** Node.js · Express · MongoDB (Mongoose) · Google Gemini.
 
+**Live backend:** https://three-way-match-engine-zbdy.onrender.com (health check: [`/health`](https://three-way-match-engine-zbdy.onrender.com/health))
+
+## Screenshots
+
+| Upload | Match result | Mismatch |
+|---|---|---|
+| [![Upload](https://drive.google.com/thumbnail?id=15qWqOE0RiNjRuP8MuDjVEj_-d5-xzqlN&sz=w600)](https://drive.google.com/file/d/15qWqOE0RiNjRuP8MuDjVEj_-d5-xzqlN/view?usp=sharing) | [![Match](https://drive.google.com/thumbnail?id=1mhsF2n90d3XRAZAoc6MDR0TYqti0xpJ5&sz=w600)](https://drive.google.com/file/d/1mhsF2n90d3XRAZAoc6MDR0TYqti0xpJ5/view?usp=sharing) | [![Mismatch](https://drive.google.com/thumbnail?id=1zgmkxS6T_d-_htURVT5B29nfxRC3By2W&sz=w600)](https://drive.google.com/file/d/1zgmkxS6T_d-_htURVT5B29nfxRC3By2W/view?usp=sharing) |
+
 ## Quick start
 
 **Prerequisites:** Node.js 18+, a MongoDB instance, and a [Gemini API key](https://aistudio.google.com/app/apikey).
